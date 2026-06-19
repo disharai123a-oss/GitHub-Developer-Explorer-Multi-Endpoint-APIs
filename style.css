@@ -1,3 +1,35 @@
+/* Disha -Part 7  - Base & Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f5f7fa);
+    min-height: 100vh;
+    padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Sahil - part 9 - form input and btn style*/
 input,
