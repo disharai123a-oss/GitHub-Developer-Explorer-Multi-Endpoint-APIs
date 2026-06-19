@@ -22,6 +22,49 @@ try {
         const user =
             await userRes.json();
 
+// disha-Part 19 -Repository List Renderer//
+
+    function showRepos(repos) {
+
+    let output = "";
+
+    repos.forEach(repo => {
+
+        output += `
+        <div class="repo">
+
+            <h3>
+                <a
+                    href="${repo.html_url}"
+                    target="_blank"
+                >
+                    ${repo.name}
+                </a>
+            </h3>
+
+            <p>
+                Language:
+                ${repo.language || "N/A"}
+            </p>
+
+            <p>
+                Stars:
+                ${repo.stargazers_count}
+            </p>
+
+            <p>
+                Forks:
+                ${repo.forks_count}
+            </p>
+
+        </div>
+        `;
+    });
+
+    document.getElementById("repos")
+        .innerHTML = output;
+}
+
 
 // Sahil - part 19 - repo sorting 
 function sortRepos() {
