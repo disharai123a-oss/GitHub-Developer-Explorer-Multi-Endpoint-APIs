@@ -1,1 +1,15 @@
 
+/*Sahil - part 9 - form input and btn style*/
+input,
+button,
+select {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+input {
+    width: 250px;
+}
