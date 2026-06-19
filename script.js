@@ -1,3 +1,15 @@
+/* Part 13 -Script State & Event Listener */
+
+const btn =
+    document.getElementById("searchBtn");
+
+let allRepos = [];
+
+let chartInstance = null;
+
+btn.addEventListener("click", getUser);
+
+
 
 // Sahil - part 15 - main user API request
 try {
