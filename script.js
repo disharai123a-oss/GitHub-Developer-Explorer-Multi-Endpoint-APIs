@@ -127,3 +127,53 @@ function sortRepos() {
 
     showRepos(allRepos);
 }
+
+
+
+
+
+
+
+/*Alok - part 24 - JS - Chart Data Processor & Renderer*/
+function showLanguages(repos) {
+
+    let languages = {};
+
+    repos.forEach(repo => {
+
+        if (repo.language) {
+
+            languages[repo.language] =
+                (languages[repo.language] || 0) + 1;
+        }
+    });
+
+    const labels =
+        Object.keys(languages);
+
+    const values =
+        Object.values(languages);
+
+    const ctx =
+        document
+            .getElementById("languageChart");
+
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+
+    chartInstance =
+        new Chart(ctx, {
+
+            type: "pie",
+
+            data: {
+
+                labels,
+
+                datasets: [{
+                    data: values
+                }]
+            }
+        });
+}
