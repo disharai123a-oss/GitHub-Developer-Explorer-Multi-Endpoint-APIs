@@ -10,6 +10,19 @@ let chartInstance = null;
 btn.addEventListener("click", getUser);
 
 
+/* p14 user Initial Fetch Handler*/
+async function getUser() {
+
+    const username =
+        document.getElementById("username").value;
+
+    if (!username) {
+        alert("Enter Username");
+        return;
+    }
+
+    document.getElementById("loading").innerText =
+        "Loading...";
 
 // Sahil - part 15 - main user API request
 try {
