@@ -45,3 +45,80 @@ select {
 input {
     width: 250px;
 }
+
+
+
+
+
+
+
+/*Alok - part 12 - CSS - Lists, Graphics, Responsive Rules*/
+.controls {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#repoCount {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #444;
+}
+
+.repo {
+    background: white;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.repo:hover {
+    transform: translateY(-3px);
+}
+
+.repo h3 {
+    margin-bottom: 8px;
+}
+
+.repo a {
+    text-decoration: none;
+    color: #2563eb;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
+
+.repo p {
+    margin: 5px 0;
+    color: #555;
+}
+
+canvas {
+    max-width: 450px;
+    margin: 30px auto;
+    display: block;
+}
+
+#loading {
+    color: #2563eb;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+
+    input,
+    button,
+    select {
+        width: 100%;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+}
