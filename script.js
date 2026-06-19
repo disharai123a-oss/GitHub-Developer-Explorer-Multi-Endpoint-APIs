@@ -22,6 +22,39 @@ try {
         const user =
             await userRes.json();
 
+
+
+
+
+
+/*Alok - part 18 - JS - Repo Fetch & Error Lifecycle*/
+const repoRes =
+            await fetch(
+                `https://api.github.com/users/${username}/repos?per_page=100`
+            );
+
+        allRepos =
+            await repoRes.json();
+
+        document.getElementById("repoCount")
+            .innerHTML =
+            `<h3>Total Repositories: ${allRepos.length}</h3>`;
+
+        showRepos(allRepos);
+
+        showLanguages(allRepos);
+
+    } catch (error) {
+
+        alert("Something went wrong");
+        console.log(error);
+
+    }
+
+    document.getElementById("loading").innerText =
+        "";
+}
+
 // disha-Part 19 -Repository List Renderer//
 
     function showRepos(repos) {
@@ -67,36 +100,10 @@ try {
 
 
 
-/*Alok - part 18 - JS - Repo Fetch & Error Lifecycle*/
-const repoRes =
-            await fetch(
-                `https://api.github.com/users/${username}/repos?per_page=100`
-            );
 
-        allRepos =
-            await repoRes.json();
-
-        document.getElementById("repoCount")
-            .innerHTML =
-            `<h3>Total Repositories: ${allRepos.length}</h3>`;
-
-        showRepos(allRepos);
-
-        showLanguages(allRepos);
-
-    } catch (error) {
-
-        alert("Something went wrong");
-        console.log(error);
-
-    }
-
-    document.getElementById("loading").innerText =
-        "";
-}
    
 
-// Sahil - part 19 - repo sorting 
+// Sahil - part 21 - repo sorting 
 function sortRepos() {
 
     let value =
