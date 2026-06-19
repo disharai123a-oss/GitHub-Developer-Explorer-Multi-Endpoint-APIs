@@ -113,9 +113,14 @@ const repoRes =
 
 
 
-
+/*part 20 Sorting Initialization Block*/
    
-
+document
+    .getElementById("sortOption")
+    .addEventListener(
+        "change",
+        sortRepos
+    );
 // Sahil - part 21 - repo sorting 
 function sortRepos() {
 
