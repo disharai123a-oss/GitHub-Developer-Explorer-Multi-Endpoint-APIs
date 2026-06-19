@@ -9,3 +9,29 @@ try {
 
         const user =
             await userRes.json();
+
+
+// Sahil - part 19 - repo sorting 
+function sortRepos() {
+
+    let value =
+        document.getElementById("sortOption").value;
+
+    if (value === "stars") {
+
+        allRepos.sort(
+            (a, b) =>
+                b.stargazers_count -
+                a.stargazers_count
+        );
+
+    } else {
+
+        allRepos.sort(
+            (a, b) =>
+                a.name.localeCompare(b.name)
+        );
+    }
+
+    showRepos(allRepos);
+}
