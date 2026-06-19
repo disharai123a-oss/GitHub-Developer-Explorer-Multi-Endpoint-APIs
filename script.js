@@ -66,6 +66,36 @@ try {
 }
 
 
+
+/*Alok - part 18 - JS - Repo Fetch & Error Lifecycle*/
+const repoRes =
+            await fetch(
+                `https://api.github.com/users/${username}/repos?per_page=100`
+            );
+
+        allRepos =
+            await repoRes.json();
+
+        document.getElementById("repoCount")
+            .innerHTML =
+            `<h3>Total Repositories: ${allRepos.length}</h3>`;
+
+        showRepos(allRepos);
+
+        showLanguages(allRepos);
+
+    } catch (error) {
+
+        alert("Something went wrong");
+        console.log(error);
+
+    }
+
+    document.getElementById("loading").innerText =
+        "";
+}
+   
+
 // Sahil - part 19 - repo sorting 
 function sortRepos() {
 
