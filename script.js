@@ -48,9 +48,18 @@ if (
 }
 
 
+// Check if any other error message is returned by the API
+if (user.message) {
+    alert(user.message);
+    return;
+}
+
+
+
+
+
+
     
-
-
 
 /*Alok - part 18 - JS - Repo Fetch & Error Lifecycle*/
 const repoRes =
