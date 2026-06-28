@@ -71,11 +71,11 @@ button {
     cursor: pointer;       
 }
 
-
-
-
-
-
+/* Button hover effect */
+button:hover {
+    background: #1d4ed8;      
+    transform: translateY(-2px); 
+}
 
 /*Alok - part 12 - CSS - Lists, Graphics, Responsive Rules*/
 .controls {
