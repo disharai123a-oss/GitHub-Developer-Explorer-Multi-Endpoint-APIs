@@ -36,8 +36,19 @@ try {
             await userRes.json();
 
 // Bhagyashree Part - 16
-    
+    // Check if the GitHub API rate limit has been exceeded
+if (
+    user.message ===
+    "API rate limit exceeded"
+) {
+    alert(
+        "GitHub API limit reached. Try later."
+    );
+    return;
+}
 
+
+    
 
 
 
