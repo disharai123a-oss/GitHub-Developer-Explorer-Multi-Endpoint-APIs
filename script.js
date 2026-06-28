@@ -169,7 +169,13 @@ function sortRepos() {
 
 // Bhagyashree Part 22
 
-
+// Add an input event listener for repository search
+document
+    .getElementById("repoSearch")
+    .addEventListener(
+        "input",
+        searchRepo
+    );
 
 
 
