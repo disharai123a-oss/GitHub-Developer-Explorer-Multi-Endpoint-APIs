@@ -62,6 +62,18 @@ input {
 
 /* Bhagyashree Part 10 */
 
+/* Styles applied to all buttons */
+button {
+    background: #2563eb;      
+    color: white;            
+    border: none;             
+    transition: 0.3s;        
+    cursor: pointer;       
+}
+
+
+
+
 
 
 
