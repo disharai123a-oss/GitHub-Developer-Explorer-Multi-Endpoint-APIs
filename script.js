@@ -190,6 +190,26 @@ document
     );
 
 
+/*Uttkarsh - part 23 - JS - Text filtering execution Logic*/
+
+   function searchRepo() {
+
+    const text =
+        document
+            .getElementById("repoSearch")
+            .value
+            .toLowerCase();
+
+    const filtered =
+        allRepos.filter(repo =>
+            repo.name
+                .toLowerCase()
+                .includes(text)
+        );
+
+    showRepos(filtered);
+}
+
 
 /*Alok - part 24 - JS - Chart Data Processor & Renderer*/
 function showLanguages(repos) {
