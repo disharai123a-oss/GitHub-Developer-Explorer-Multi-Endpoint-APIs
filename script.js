@@ -56,10 +56,22 @@ if (user.message) {
 
 
 
+/*Uttkarsh - part 17 - JS - profile DoM Render Template*/
 
+ document.getElementById("profile").innerHTML =
+            `
+            <img src="${user.avatar_url}">
 
+            <h2>${user.name || "No Name"}</h2>
 
-    
+            <p>${user.bio || ""}</p>
+
+            <p>Followers: ${user.followers}</p>
+
+            <p>Following: ${user.following}</p>
+
+            <p>Repositories: ${user.public_repos}</p>
+        `;
 
 /*Alok - part 18 - JS - Repo Fetch & Error Lifecycle*/
 const repoRes =
