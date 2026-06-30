@@ -18,8 +18,7 @@ A simple web app that uses the **GitHub REST API** to look up any GitHub user an
 - **HTML5** — page structure and markup
 - **CSS3** — gradient backgrounds, card layouts, hover effects, and responsive media queries
 - **JavaScript (Vanilla)** — async/await fetch calls, DOM manipulation, sorting and filtering logic
-- **[Chart.js](https://www.chartjs.org/)** — language usage pie chart
-- **GitHub REST API** — `/users/{username}` and `/users/{username}/repos` endpoints
+
 
 ## How It Works
 
@@ -54,6 +53,18 @@ open index.html
 
 - This app uses the unauthenticated GitHub REST API, which has a rate limit of 60 requests per hour per IP address. If you hit the limit, you'll see an alert and can try again later.
 - No API key or backend is required — everything runs client-side in the browser.
+
+
+## 🤝 Contributors
+
+Thank you to everyone who contributed to this project!
+
+- Bhagyashree Patil ([@bhagyapatil486](https://github.com/bhagyapatil486))
+- Uttkarsh Chambiyal ([@Uttkarshchambiyal](https://github.com/Uttkarshchambiyal))
+- Sahil Behra ([@sahilbehera1012007-cyber](https://github.com/sahilbehera1012007-cyber))
+- Disha Rai ([@disharai123a-oss](https://github.com/disharai123a-oss))
+- Abhishek ([@abhishek-d19](https://github.com/abhishek-d19))
+- Alok Kumar ([@alokrm2008-a11y](https://github.com/alokrm2008-a11y))
 
 ## License
 
