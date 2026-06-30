@@ -10,7 +10,7 @@ let chartInstance = null;
 btn.addEventListener("click", getUser);
 
 
-/* p14 user Initial Fetch Handler*/
+/* p14 user Initial Fetch Handler abhii*/
 async function getUser() {
 
     const username =
@@ -146,7 +146,7 @@ const repoRes =
 
 
 
-/*part 20 Sorting Initialization Block*/
+/*part 20 Sorting Initialization Block abhii*/
    
 document
     .getElementById("sortOption")
