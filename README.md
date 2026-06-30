@@ -8,52 +8,53 @@ A simple web app that uses the **GitHub REST API** to look up any GitHub user an
 - 👤 **Profile overview** — avatar, name, bio, followers, following, and public repo count
 - 📦 **Repository listing** — name, language, stars, and forks for every repo
 - 🔃 **Sort repositories** by star count or name
-- 🔎 **Live repository search/filter** as you type
-- 📊 **Language distribution chart** — visualizes repo languages as a pie chart using Chart.js
+- 🔎 **Filter repositories** by name in real time
+- 📊 **Language breakdown chart** — pie chart of languages used across repos, powered by Chart.js
 - ⚠️ **Error handling** — alerts for invalid usernames and GitHub API rate limits
+- 📱 **Responsive design** — works smoothly on mobile and desktop
 
 ## Tech Stack
 
-- HTML5
-- CSS3 (responsive, flexbox-based layout)
-- Vanilla JavaScript (Fetch API, async/await)
-- [Chart.js](https://www.chartjs.org/) for data visualization
-- [GitHub REST API](https://docs.github.com/en/rest)
-
-## Project Structure
-
-```
-├── index.html      # App markup and layout
-├── style.css       # Styling and responsive design
-├── script.js       # API calls, rendering, sorting, filtering, chart logic
-└── README.md
-```
-
-## Getting Started
-
-No build tools or dependencies to install — it's a static site.
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/disharai123a-oss/GitHub-Developer-Explorer-Multi-Endpoint-APIs.git
-   ```
-2. Open `index.html` in your browser
-
-That's it — start typing a GitHub username and hit **Search**.
+- **HTML5** — page structure and markup
+- **CSS3** — gradient backgrounds, card layouts, hover effects, and responsive media queries
+- **JavaScript (Vanilla)** — async/await fetch calls, DOM manipulation, sorting and filtering logic
+- **[Chart.js](https://www.chartjs.org/)** — language usage pie chart
+- **GitHub REST API** — `/users/{username}` and `/users/{username}/repos` endpoints
 
 ## How It Works
 
 1. Enter a GitHub username and click **Search**.
-2. The app fetches the user's profile via `GET /users/{username}`.
-3. It then fetches up to 100 of their repositories via `GET /users/{username}/repos`.
-4. Repository data is rendered as cards and summarized in a language pie chart.
-5. Use the search box or sort dropdown to filter/reorder repositories in real time.
+2. The app fetches the user's profile data from the GitHub API and renders it (avatar, bio, follower stats, etc.).
+3. It then fetches all public repositories and displays them as cards with language, stars, and forks.
+4. Use the **search box** to filter repositories by name, or the **sort dropdown** to order them by stars or name.
+5. A **pie chart** visualizes the distribution of programming languages across the user's repositories.
+
+## Getting Started
+
+1. Clone or download this repository.
+2. Open `index.html` in your browser — no build step or server required.
+3. Enter any GitHub username and explore!
+
+```bash
+git clone https://github.com/disharai123a-oss/GitHub-Developer-Explorer-Multi-Endpoint-APIs.git
+cd GitHub-Developer-Explorer-Multi-Endpoint-APIs
+open index.html
+```
+
+## Project Structure
+
+```
+├── index.html      # Page structure and layout
+├── style.css       # Styling, layout, and responsive design
+├── script.js       # API calls, rendering, sorting, filtering, and charting logic
+└── README.md
+```
 
 ## Notes
 
-- This app uses the **unauthenticated** GitHub API, which has a rate limit of 60 requests/hour per IP. If you hit the limit, you'll see an alert — try again later.
-- Built collaboratively as a team project, with each section of the codebase contributed by a different member.
+- This app uses the unauthenticated GitHub REST API, which has a rate limit of 60 requests per hour per IP address. If you hit the limit, you'll see an alert and can try again later.
+- No API key or backend is required — everything runs client-side in the browser.
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available for personal and educational use.
